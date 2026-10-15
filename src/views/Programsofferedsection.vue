@@ -59,7 +59,10 @@ const programs = [
 
 <style scoped>
 .programs-section {
-  padding: 0 1.5rem 4rem;
+  display: grid;
+  place-items: center;
+  min-height: 470px;
+  padding: 2rem 1.5rem;
   background: #ffffff;
   scroll-margin-top: 5rem;
 }
@@ -130,6 +133,12 @@ const programs = [
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 600px;
     gap: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .programs-section {
+    min-height: 440px;
   }
 }
 

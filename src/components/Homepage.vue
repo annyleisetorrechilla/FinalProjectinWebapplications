@@ -1,7 +1,6 @@
 <script setup>
 import HeroSection from '../views/Hero.vue'
 import ProgramsOfferedSection from '../views/Programsofferedsection.vue'
-import FacultyAndStaff from '../views/Facultyandstaff.vue'
 import PartnershipsAndMemberships from '../views/Partnershipsandmemberships.vue'
 </script>
 
@@ -9,7 +8,6 @@ import PartnershipsAndMemberships from '../views/Partnershipsandmemberships.vue'
   <main class="page-shell">
     <HeroSection />
     <ProgramsOfferedSection />
-    <FacultyAndStaff />
     <PartnershipsAndMemberships />
   </main>
 </template>

@@ -49,6 +49,10 @@ const partners = [
 
 <style scoped>
 .partners-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 470px;
   padding: 1.5rem 1.5rem 3rem;
   background: #3E3C3B;
   color: #263f44;
@@ -174,6 +178,12 @@ const partners = [
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.4rem 1rem;
     margin-block: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .partners-section {
+    min-height: 440px;
   }
 }
 </style>

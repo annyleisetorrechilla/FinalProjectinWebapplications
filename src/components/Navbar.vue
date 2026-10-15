@@ -8,7 +8,6 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a class="active" href="#hero">Home</a>
         <a href="#programs">Academic Programs</a>
-        <a href="#faculty">Faculty and Staff</a>
         <a href="#partnerships">Partnerships</a>
       </nav>
     </div>
