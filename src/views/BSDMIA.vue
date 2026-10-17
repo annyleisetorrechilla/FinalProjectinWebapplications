@@ -87,7 +87,7 @@ import DMIAlogo from '../assets/MIDAS_PNG-150x150.png'
         aria-labelledby="rationale-heading"
       >
           <h3 id="rationale-heading">Curriculum Rationale</h3>
-          <p>
+          <p class="rationale-copy">
             The Bachelor of Science in Digital Media and Interactive Arts (BSDMIA) program is offered based on CMO 19 s 2016 article iii section 11 which states that an autonomous institution has the privilege to offer new course(s)/program(s) in the undergraduate and/or graduate levels. 
             Along with this is the effect of technology in the field of arts and other art related careers. Careers in the field of information technology education (ITE) has expanded in the area of art. This has long been integrated in the ITE programs when multimedia was considered as one of its free elective course.
             As defined in the animation career review site, interactive arts and media discipline combines the elements of arts, design and technology. Artist in the field typically have advanced skills in the areas of visual design, digital storytelling, time-based media, and shaping interactive experiences. 
@@ -239,9 +239,11 @@ import DMIAlogo from '../assets/MIDAS_PNG-150x150.png'
 
 <style scoped>
 .computer-science-page {
+  --program-accent: #7951a5;
+  --program-accent-soft: #f4ebfb;
   min-height: 100vh;
   padding: 0 1.5rem 4rem;
-  background: #ffffff;
+  background: #f8fafc;
   color: #25364a;
 }
 
@@ -249,7 +251,7 @@ import DMIAlogo from '../assets/MIDAS_PNG-150x150.png'
   position: relative;
   isolation: isolate;
   display: grid;
-  min-height: 340px;
+  min-height: 470px;
   align-items: center;
   overflow: hidden;
   margin-inline: -1.5rem;
@@ -532,13 +534,158 @@ h1 {
   scroll-margin-top: 5rem;
 }
 
+.content-sections {
+  max-width: 1100px;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.content-card {
+  grid-column: 1 / -1;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.07);
+}
+
+.content-card h2,
+.information-section h3 {
+  color: var(--program-accent);
+}
+
+.objectives-subnav a {
+  color: var(--program-accent);
+}
+
+.outcomes-table thead th {
+  background: var(--program-accent);
+}
+
+.outcomes-table tbody th {
+  color: var(--program-accent);
+}
+
+.program-quote {
+  border-left-color: var(--program-accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--program-accent-soft);
+}
+
+.content-card > ol,
+.content-card > ul {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.information-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.information-section h4 {
+  font-size: 0.9rem;
+}
+
+.information-section p,
+.information-section li {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.information-section ol,
+.information-section ul {
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.outcomes-table-wrap {
+  width: min(100%, 900px);
+  margin-inline: auto;
+}
+
+.outcomes-table td {
+  text-align: justify;
+}
+
+.graduate-outcomes h4,
+#graduate-outcomes h4 {
+  text-align: center;
+}
+
+.page-actions {
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.intro .section-button {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--program-accent);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--program-accent);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.intro .section-button:hover,
+.intro .section-button:focus-visible {
+  border-color: var(--program-accent);
+  background: var(--program-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.objectives-subnav {
+  justify-content: center;
+  text-align: center;
+}
+
+.content-card h2,
+.information-section h2,
+.information-section h3,
+.information-section h4 {
+  font-family: inherit;
+  text-align: center;
+}
+
+.content-card h2 {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.information-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.information-section h4 {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.graduate-outcomes h4,
+#go h4 {
+  color: #6b7280;
+  text-align: center;
+}
+
+.outcomes-table thead th {
+  text-align: center;
+}
+
+.program-quote {
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .computer-science-page {
     padding: 0 1rem 2.5rem;
   }
 
   .intro {
-    min-height: 300px;
+    min-height: 440px;
     margin-inline: -1rem;
     padding: 5rem 1.25rem 2rem;
   }
@@ -574,11 +721,6 @@ h1 {
     font-size: 0.82rem;
   }
 
-  .objectives-subnav {
-    justify-content: flex-start;
-    gap: 0.65rem 0.9rem;
-  }
-
   .objectives-subnav a {
     font-size: 0.76rem;
   }
@@ -604,5 +746,36 @@ h1 {
   .information-section .knowledge-areas {
     grid-template-columns: 1fr;
   }
+}
+
+.computer-science-page {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.computer-science-page h1 {
+  font-size: 35px;
+}
+
+.computer-science-page h2,
+.computer-science-page h3,
+.computer-science-page h4 {
+  font-size: 20px;
+}
+
+.computer-science-page p,
+.computer-science-page li,
+.computer-science-page td,
+.computer-science-page th,
+.computer-science-page a,
+.computer-science-page blockquote {
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.computer-science-page .information-section p.rationale-copy,
+.computer-science-page .campus-life-copy {
+  font-size: 12px;
 }
 </style>

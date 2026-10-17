@@ -83,7 +83,7 @@ import BLISlogo from '../assets/LISSO-150x150.png'
         aria-labelledby="rationale-heading"
       >
           <h3 id="rationale-heading">Curriculum Rationale</h3>
-          <p>
+          <p class="rationale-copy">
             Based on he Guidelines for the Implementation of CMO 46 s. 2012, this PSG implements the “shift to learning competency-based standards/outcomes-based education”. It specifies the “core competencies” expected of Bachelor of Library and Information Science (BLIS) graduates regardless of the type of HEI they graduate from. However, in recognition of the spirit of outcomes-based education-which puts premium in the achievement of learning outcomes through different strategies-and in recognition of the typology of HEIs, this PSG also provides ample space for HEIs to innovate in the curriculum, in line with the assessment of how best to achieve learning outcomes in their particular contexts and their respective missions.
 
 Policies and standards int he Library and Information Science (LIS) program are necessary for the highest level of quality desired for the education and training of library and information science professionals. They are meant to institutionalize the profession’s central function of providing quality information service to library/information center clientele or users. Its purpose is to make LIS education responsive to the challenges of society’s changing information needs brought about by rapid technological changes and in keeping with the need to make LIS professionals globally competitive. 
@@ -100,7 +100,7 @@ Policies and standards int he Library and Information Science (LIS) program are 
             <li>
               The LIS curriculum is designed to equip the professional with the composite knowledge, skills, attitudes, and tools to enable him/her to be responsive to the changing information needs of society.
             </li>
-            <li>
+            <li class="curriculum-society-copy">
               The Computer Science Society embraces its Mission to promote the Computer Science Course, to guide and prepare the students, to grow and strengthen the bonds of each member as one family, and to utilize the resources of the program to provide service to society and emphasize to students the need of lifelong learning, ethical conduct and an understanding of the diverse social context in which Computer Science is practiced. We furthermore seek to provide excellence in activities and outreaches to develop the community of all Computer Science Students to help and support its members to reach their goals in the ever advance, 21st century.
             </li>
             <li>Defines eleven (11) Knowledge Areas:</li>
@@ -138,7 +138,7 @@ Policies and standards int he Library and Information Science (LIS) program are 
         class="content-card information-section graduate-outcomes"
         aria-labelledby="graduate-outcomes-heading"
       >
-          <h3 class="degree-heading">Bachelor of Science in Computer Science (BSLIS)</h3>
+          <h3 class="degree-heading">Bachelor of Science in Information Systems (BSIS)</h3>
           <h4 id="graduate-outcomes-heading">Graduate Outcomes</h4>
           <div class="outcomes-table-wrap">
             <table class="outcomes-table">
@@ -176,40 +176,49 @@ Policies and standards int he Library and Information Science (LIS) program are 
                 <tr>
                   <th scope="row">LIS05</th>
                   <td>
-                    Identify users’ needs and wants through reference interviews, customer surveys,      complaint logs and other means in order to evaluate the effectiveness of current      services and improve these and other practices.
+                    Recognize, analyze and constructively solve problems, provide appropriate direction and assistance, and overcome barriers when necessary.
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">LIS06</th>
                   <td>
-                    Work well in groups and seek ways to build team efforts to solve problems and achieve common goals.
+                    Identify users’ needs and wants through reference interviews, customer surveys, complaint logs and other means in order to evaluate the effectiveness of current services and improve these and other practices.
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">LIS07</th>
                   <td>
-                    Understand library’s automation system and the use of computer hardware,      software and peripherals, including online collaboration tools (the internet, the      worldwide web, and social networking sites).
+                    Work well in groups and seek ways to build team efforts to solve problems and achieve common goals.
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">LIS08</th>
                   <td>
-                    Develop information technology solutions (e.g., library automation system, Website, e-mail system, etc.).
+                    Understand library’s automation system and the use of computer hardware, software and peripherals, including online collaboration tools (the internet, the worldwide web, and social networking sites).
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">LIS09</th>
                   <td>
-                    Conduct significant research projects that will benefit the library and the organization
+                    Develop information technology solutions (e.g., library automation system, Website, e-mail system, etc.).
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">LIS10</th>
                   <td>
+                    Conduct significant research projects that will benefit the library and the organization.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">LIS11</th>
+                  <td>
                     Evaluate and debate information policy (e.g., copyright law, plagiarism, cybercrimes, etc.) and ethical issues applicable in local, national or global context.
                   </td>
+                </tr>
+                <tr>
+                  <th scope="row">LIS12</th>
                   <td>
-                    Participate in continuing education activities organized by library associations and    other entities
+                    Participate in continuing education activities organized by library associations and other entities.
                   </td>
                 </tr>
               </tbody>
@@ -225,9 +234,11 @@ Policies and standards int he Library and Information Science (LIS) program are 
 
 <style scoped>
 .computer-science-page {
+  --program-accent: #42a6cf;
+  --program-accent-soft: #e8f7fc;
   min-height: 100vh;
   padding: 0 1.5rem 4rem;
-  background: #ffffff;
+  background: #f8fafc;
   color: #25364a;
 }
 
@@ -235,12 +246,12 @@ Policies and standards int he Library and Information Science (LIS) program are 
   position: relative;
   isolation: isolate;
   display: grid;
-  min-height: 340px;
+  min-height: 470px;
   align-items: center;
   overflow: hidden;
   margin-inline: -1.5rem;
   padding: 3.5rem max(1.5rem, calc((100vw - 720px) / 2));
-  color: #f8fafc;
+  color: #1f2937;
   text-align: center;
 }
 
@@ -252,16 +263,16 @@ Policies and standards int he Library and Information Science (LIS) program are 
   place-items: center;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 62% 48%, rgba(227, 227, 227, 0.12), transparent 48%),
-    #2e4557;
+    radial-gradient(ellipse at 62% 48%, rgba(255, 255, 255, 0.45), transparent 48%),
+    #d1d5db;
 }
 
 .intro-backdrop img {
-  width: min(50vw, 500px);
-  height: min(50vw, 500px);
+  width: min(55vw, 520px);
+  height: min(55vw, 520px);
   object-fit: cover;
-  opacity: 0.075;
-  filter: grayscale(1) brightness(2.2);
+  opacity: 0.24;
+  filter: grayscale(1) contrast(1.15);
   transform: rotate(-12deg) scale(.9);
 }
 
@@ -272,7 +283,7 @@ Policies and standards int he Library and Information Science (LIS) program are 
 
 .eyebrow {
   margin: 0 0 0.65rem;
-  color: #cbd5d1;
+  color: #4b5563;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -281,7 +292,7 @@ Policies and standards int he Library and Information Science (LIS) program are 
 
 h1 {
   margin: 0;
-  color: #f8fafc;
+  color: #111827;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
@@ -291,7 +302,7 @@ h1 {
 .lead {
   max-width: 620px;
   margin: 0.9rem auto 0;
-  color: #e3e3e3;
+  color: #374151;
   font-size: 0.95rem;
   line-height: 1.7;
 }
@@ -306,7 +317,7 @@ h1 {
 
 .section-button {
   padding: 0.25rem 0;
-  color: #f8fafc;
+  color: #1f2937;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -317,11 +328,11 @@ h1 {
 .section-button:hover,
 .section-button:focus-visible {
   border-color: currentColor;
-  color: #ffc247;
+  color: #374151;
 }
 
 .content-sections {
-  max-width: 720px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -518,13 +529,159 @@ h1 {
   scroll-margin-top: 5rem;
 }
 
+.content-sections {
+  max-width: 1100px;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.content-card {
+  grid-column: 1 / -1;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.07);
+}
+
+.content-card h2,
+.information-section h3 {
+  color: var(--program-accent);
+}
+
+.objectives-subnav a {
+  color: var(--program-accent);
+}
+
+.outcomes-table thead th {
+  background: var(--program-accent);
+}
+
+.outcomes-table tbody th {
+  color: var(--program-accent);
+}
+
+.program-quote {
+  border-left-color: var(--program-accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--program-accent-soft);
+}
+
+.content-card > ol,
+.content-card > ul {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.information-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.information-section h4 {
+  font-size: 0.9rem;
+}
+
+.information-section p,
+.information-section li {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.information-section ol,
+.information-section ul {
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.outcomes-table-wrap {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+.outcomes-table td {
+  text-align: justify;
+}
+
+.graduate-outcomes h4,
+#graduate-outcomes h4 {
+  text-align: center;
+}
+
+.page-actions {
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.intro .section-button {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--program-accent);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--program-accent);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.intro .section-button:hover,
+.intro .section-button:focus-visible {
+  border-color: var(--program-accent);
+  background: var(--program-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.objectives-subnav {
+  justify-content: center;
+  text-align: center;
+}
+
+.content-card h2,
+.information-section h2,
+.information-section h3,
+.information-section h4 {
+  font-family: inherit;
+  text-align: center;
+}
+
+.content-card h2 {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.information-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.information-section h4 {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.graduate-outcomes h4,
+#go h4 {
+  color: #6b7280;
+  text-align: center;
+}
+
+.outcomes-table thead th {
+  text-align: center;
+}
+
+.program-quote {
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .computer-science-page {
     padding: 0 1rem 2.5rem;
   }
 
   .intro {
-    min-height: 300px;
+    min-height: 440px;
     margin-inline: -1rem;
     padding: 5rem 1.25rem 2rem;
   }
@@ -560,11 +717,6 @@ h1 {
     font-size: 0.82rem;
   }
 
-  .objectives-subnav {
-    justify-content: flex-start;
-    gap: 0.65rem 0.9rem;
-  }
-
   .objectives-subnav a {
     font-size: 0.76rem;
   }
@@ -590,5 +742,37 @@ h1 {
   .information-section .knowledge-areas {
     grid-template-columns: 1fr;
   }
+}
+
+.computer-science-page {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.computer-science-page h1 {
+  font-size: 35px;
+}
+
+.computer-science-page h2,
+.computer-science-page h3,
+.computer-science-page h4 {
+  font-size: 20px;
+}
+
+.computer-science-page p,
+.computer-science-page li,
+.computer-science-page td,
+.computer-science-page th,
+.computer-science-page a,
+.computer-science-page blockquote {
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.computer-science-page .information-section p.rationale-copy,
+.computer-science-page .information-section li.curriculum-society-copy,
+.computer-science-page .campus-life-copy {
+  font-size: 12px;
 }
 </style>

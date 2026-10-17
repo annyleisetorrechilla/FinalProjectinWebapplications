@@ -282,9 +282,11 @@ import informationTechnologyLogo from '../assets/1-150x150.png'
 
 <style scoped>
 .information-technology-page {
+  --program-accent: #c89a00;
+  --program-accent-soft: #fff7db;
   min-height: 100vh;
   padding: 0 1.5rem 4rem;
-  background: #ffffff;
+  background: #f8fafc;
   color: #25364a;
 }
 
@@ -292,7 +294,7 @@ import informationTechnologyLogo from '../assets/1-150x150.png'
   position: relative;
   isolation: isolate;
   display: grid;
-  min-height: 340px;
+  min-height: 470px;
   align-items: center;
   overflow: hidden;
   margin-inline: -1.5rem;
@@ -588,13 +590,182 @@ h1 {
   scroll-margin-top: 5rem;
 }
 
+.content-sections {
+  max-width: 1100px;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.content-card {
+  grid-column: 1 / -1;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.07);
+}
+
+.content-card h2,
+.information-section h3,
+.information-section h4 {
+  color: var(--program-accent);
+}
+
+.section-nav a {
+  color: var(--program-accent);
+}
+
+.outcomes-table thead th {
+  background: var(--program-accent);
+}
+
+.outcomes-table tbody th {
+  color: var(--program-accent);
+}
+
+.program-quote {
+  border-left-color: var(--program-accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--program-accent-soft);
+}
+
+.content-card > ol,
+.content-card > ul {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.information-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.information-section h4 {
+  font-size: 0.9rem;
+}
+
+.information-section p,
+.information-section li {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.information-section ol,
+.information-section ul {
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.outcomes-table-wrap {
+  width: min(100%, 900px);
+  margin-inline: auto;
+}
+
+.outcomes-table td {
+  text-align: justify;
+}
+
+#graduate-outcomes h4 {
+  text-align: center;
+}
+
+.intro {
+  color: #1f2937;
+}
+
+.intro-backdrop {
+  background:
+    radial-gradient(ellipse at 62% 48%, rgba(255, 255, 255, 0.45), transparent 48%),
+    var(--program-accent-soft);
+}
+
+.intro-backdrop img {
+  opacity: 0.22;
+  filter: grayscale(1) contrast(1.15);
+}
+
+.eyebrow {
+  color: #8a6a16;
+}
+
+h1 {
+  color: #111827;
+}
+
+.lead {
+  color: #374151;
+}
+
+.page-actions {
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.intro .section-button {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--program-accent);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--program-accent);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.intro .section-button:hover,
+.intro .section-button:focus-visible {
+  border-color: var(--program-accent);
+  background: var(--program-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.section-nav {
+  justify-content: center;
+  text-align: center;
+}
+
+.content-card h2,
+.information-section h2,
+.information-section h3,
+.information-section h4 {
+  font-family: inherit;
+  text-align: center;
+}
+
+.content-card h2 {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.information-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.information-section h4 {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+#graduate-outcomes h4 {
+  color: #6b7280;
+  text-align: center;
+}
+
+.outcomes-table thead th {
+  text-align: center;
+}
+
+.program-quote {
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .information-technology-page {
     padding: 0 1rem 2.5rem;
   }
 
   .intro {
-    min-height: 300px;
+    min-height: 440px;
     margin-inline: -1rem;
     padding: 5rem 1.25rem 2rem;
   }
@@ -642,5 +813,31 @@ h1 {
   .outcomes-table td {
     padding: 0.5rem 0.4rem;
   }
+}
+
+.information-technology-page {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.information-technology-page h1 {
+  font-size: 35px;
+}
+
+.information-technology-page h2,
+.information-technology-page h3,
+.information-technology-page h4 {
+  font-size: 20px;
+}
+
+.information-technology-page p,
+.information-technology-page li,
+.information-technology-page td,
+.information-technology-page th,
+.information-technology-page a,
+.information-technology-page blockquote {
+  font-family: inherit;
+  font-size: 12px;
 }
 </style>

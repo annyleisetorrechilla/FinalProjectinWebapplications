@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import ciscoLogo from '../assets/Partners/1024px-Cisco_academy_logo.svg_-300x300.png'
 import acerLogo from '../assets/Partners/acer-300x300.jpg.jpeg'
 import huaweiLogo from '../assets/Partners/huawei-academy-logo.jpg.jpeg'
@@ -12,6 +12,8 @@ const partners = [
   { name: 'Acer Academy', logo: acerLogo },
   { name: 'Huawei ICT Academy', logo: huaweiLogo },
 ]
+
+const visiblePartners = computed(() => (isExpanded.value ? partners : partners.slice(0, 2)))
 </script>
 
 <template>
@@ -22,18 +24,26 @@ const partners = [
       <p class="subtitle">Driving technology for education</p>
     </header>
 
-    <div class="partners-grid" aria-label="Partners and memberships">
-      <div v-for="partner in partners" :key="partner.name" class="partner">
-        <div v-if="partner.kind === 'oracle'" class="oracle-wordmark" role="img" :aria-label="partner.name">
-          <span>{{ partner.logoText }}</span>
-          <small>Academy</small>
+    <div
+      class="partners-grid"
+      :class="{ 'partners-grid--expanded': isExpanded }"
+      aria-label="Partners and memberships"
+    >
+      <div v-for="partner in visiblePartners" :key="partner.name" class="partner">
+        <div class="partner-logo">
+          <div
+            v-if="partner.kind === 'oracle'"
+            class="oracle-wordmark"
+            role="img"
+            :aria-label="partner.name"
+          >
+            <span>{{ partner.logoText }}</span>
+            <small>Academy</small>
+          </div>
+          <img v-else :src="partner.logo" :alt="partner.name" />
         </div>
-        <img v-else :src="partner.logo" :alt="partner.name" />
+        <p class="partner-name">{{ partner.name }}</p>
       </div>
-    </div>
-
-    <div v-if="isExpanded" class="partner-details">
-      <p v-for="partner in partners" :key="partner.name">{{ partner.name }}</p>
     </div>
 
     <button
@@ -88,33 +98,54 @@ const partners = [
 
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   justify-items: center;
-  gap: 2rem;
-  width: min(100%, 760px);
-  margin: 3rem auto 3rem;
+  gap: 2rem 1.5rem;
+  width: min(100%, 520px);
+  margin: 3rem auto 0;
+}
+
+.partners-grid--expanded {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 520px);
 }
 
 .partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+.partner-logo {
   display: grid;
   place-items: center;
   width: 100%;
-  height: 90px;
+  height: 140px;
 }
 
-.partner img {
+.partner-logo img {
   display: block;
-  width: 100%;
-  height: 100%;
-  max-width: 125px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
+}
+
+.partner-name {
+  min-height: 2.5em;
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .oracle-wordmark {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   color: #e44335;
   line-height: 1;
 }
@@ -132,23 +163,9 @@ const partners = [
   font-size: 0.95rem;
 }
 
-.partner-details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.65rem 1.5rem;
-  width: min(100%, 760px);
-  margin: -0.5rem auto 1.5rem;
-  color: #617276;
-  font-size: 0.82rem;
-}
-
-.partner-details p {
-  margin: 0;
-}
-
 .view-more {
   min-width: 88px;
+  margin: 2rem auto 0;
   padding: 0.55rem 0.9rem;
   border: 0;
   border-radius: 2px;
@@ -160,7 +177,7 @@ const partners = [
 }
 
 .view-more:hover {
-  background: #a1a1a1;
+  background: #b8b8b8;
   transform: translateY(-1px);
 }
 
@@ -174,10 +191,12 @@ const partners = [
     padding-inline: 1rem;
   }
 
-  .partners-grid {
+  .partners-grid,
+  .partners-grid--expanded {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 520px);
     gap: 1.4rem 1rem;
-    margin: 2rem auto 3rem;
+    margin: 2rem auto 0;
   }
 }
 

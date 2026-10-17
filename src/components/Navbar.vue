@@ -115,20 +115,18 @@ function closePrograms() {
 }
 
 .navbar-wrap--information-technology {
-  background: #244b53;
+  background: #8a6a16;
 }
 
 .navbar-wrap--computer-science {
-  background: #244b53;
+  background: #2775bb;
 }
 
 .navbar-wrap--bsdmia {
-  background: #4f4066;
-  opacity: 0.8;
+  background: #7951a5;
 }
 .navbar-wrap--blis {
-  background: #2e4557;
-  opacity: 0.8;
+  background: #318bb3;
 }
 
 

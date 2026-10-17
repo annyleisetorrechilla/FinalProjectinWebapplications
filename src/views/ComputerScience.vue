@@ -12,8 +12,7 @@ import computerScienceLogo from '../assets/CSS_PNG-150x150.png'
         <p class="eyebrow">Academic Program · BSCS</p>
         <h1>Computer Science</h1>
         <p class="lead">
-          The Computer Science (CS) Program is designed for students who want to study computing in
-          depth.
+          The Computer Science (CS) Program is designed for students who want to study computing in depth.
         </p>
         <nav class="page-actions" aria-label="Computer Science page sections">
           <a class="section-button" href="#objectives">Objectives</a>
@@ -293,9 +292,11 @@ import computerScienceLogo from '../assets/CSS_PNG-150x150.png'
 
 <style scoped>
 .computer-science-page {
+  --program-accent: #2775bb;
+  --program-accent-soft: #eaf4ff;
   min-height: 100vh;
   padding: 0 1.5rem 4rem;
-  background: #ffffff;
+  background: #f8fafc;
   color: #25364a;
 }
 
@@ -303,12 +304,12 @@ import computerScienceLogo from '../assets/CSS_PNG-150x150.png'
   position: relative;
   isolation: isolate;
   display: grid;
-  min-height: 340px;
+  min-height: 470px;
   align-items: center;
   overflow: hidden;
   margin-inline: -1.5rem;
   padding: 3.5rem max(1.5rem, calc((100vw - 720px) / 2));
-  color: #f8fafc;
+  color: #1f2937;
   text-align: center;
 }
 
@@ -320,16 +321,16 @@ import computerScienceLogo from '../assets/CSS_PNG-150x150.png'
   place-items: center;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 62% 48%, rgba(227, 227, 227, 0.12), transparent 48%),
-    #4f4066;
+    radial-gradient(ellipse at 62% 48%, rgba(255, 255, 255, 0.45), transparent 48%),
+    #d1d5db;
 }
 
 .intro-backdrop img {
-  width: min(50vw, 500px);
-  height: min(50vw, 500px);
+  width: min(55vw, 520px);
+  height: min(55vw, 520px);
   object-fit: cover;
-  opacity: 0.075;
-  filter: grayscale(1) brightness(2.2);
+  opacity: 0.24;
+  filter: grayscale(1) contrast(1.15);
   transform: rotate(-12deg) scale(0.9);
 }
 
@@ -340,7 +341,7 @@ import computerScienceLogo from '../assets/CSS_PNG-150x150.png'
 
 .eyebrow {
   margin: 0 0 0.65rem;
-  color: #cbd5d1;
+  color: #4b5563;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -349,7 +350,7 @@ import computerScienceLogo from '../assets/CSS_PNG-150x150.png'
 
 h1 {
   margin: 0;
-  color: #f8fafc;
+  color: #111827;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
@@ -359,7 +360,7 @@ h1 {
 .lead {
   max-width: 620px;
   margin: 0.9rem auto 0;
-  color: #e3e3e3;
+  color: #374151;
   font-size: 0.95rem;
   line-height: 1.7;
 }
@@ -375,7 +376,7 @@ h1 {
 .section-button {
   padding: 0.25rem 0;
   border-bottom: 1px solid transparent;
-  color: #f8fafc;
+  color: #1f2937;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -385,14 +386,14 @@ h1 {
 .section-button:hover,
 .section-button:focus-visible {
   border-color: currentColor;
-  color: #ffc247;
+  color: #374151;
 }
 
 .content-sections {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
-  max-width: 720px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0;
 }
@@ -591,20 +592,184 @@ h1 {
   scroll-margin-top: 5rem;
 }
 
+.objectives-subnav {
+  justify-content: center;
+  text-align: center;
+}
+
+.content-sections {
+  max-width: 1100px;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.content-card {
+  grid-column: 1 / -1;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.07);
+}
+
+.content-card h2,
+.information-section h3 {
+  color: var(--program-accent);
+}
+
+.objectives-subnav a {
+  color: var(--program-accent);
+}
+
+.outcomes-table thead th {
+  background: var(--program-accent);
+}
+
+.outcomes-table tbody th {
+  color: var(--program-accent);
+}
+
+.program-quote {
+  border-left-color: var(--program-accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--program-accent-soft);
+}
+
+.content-card > ol,
+.content-card > ul {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.information-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.information-section h4 {
+  font-size: 0.9rem;
+}
+
+.information-section p,
+.information-section li {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.information-section ol,
+.information-section ul {
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.outcomes-table-wrap {
+  width: min(100%, 900px);
+  margin-inline: auto;
+}
+
+.outcomes-table td {
+  text-align: justify;
+}
+
+.graduate-outcomes h4,
+#graduate-outcomes h4 {
+  text-align: center;
+}
+
+.intro-backdrop {
+  background:
+    radial-gradient(ellipse at 62% 48%, rgba(255, 255, 255, 0.45), transparent 48%),
+    var(--program-accent-soft);
+}
+
+.page-actions {
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.intro .section-button {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--program-accent);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--program-accent);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.intro .section-button:hover,
+.intro .section-button:focus-visible {
+  border-color: var(--program-accent);
+  background: var(--program-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.objectives-subnav {
+  justify-content: center;
+  text-align: center;
+}
+
+.content-card h2,
+.information-section h2,
+.information-section h3,
+.information-section h4 {
+  font-family: inherit;
+  text-align: center;
+}
+
+.content-card h2 {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.information-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.information-section h4 {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.graduate-outcomes h4,
+#go h4 {
+  color: #6b7280;
+  text-align: center;
+}
+
+.outcomes-table thead th {
+  text-align: center;
+}
+
+.program-quote {
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .computer-science-page {
     padding: 0 1rem 2.5rem;
   }
 
   .intro {
-    min-height: 300px;
+    min-height: 440px;
     margin-inline: -1rem;
     padding: 5rem 1.25rem 2rem;
+  }
+
+  .intro-copy {
+    padding-left: 0;
   }
 
   .intro-backdrop img {
     width: 115vw;
     height: 115vw;
+  }
+
+  .objectives-subnav {
+    justify-content: center;
   }
 
   .eyebrow {
@@ -644,6 +809,54 @@ h1 {
   .outcomes-table th,
   .outcomes-table td {
     padding: 0.5rem 0.4rem;
+  }
+}
+
+.computer-science-page {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.computer-science-page h1 {
+  font-size: 35px;
+}
+
+.computer-science-page h2,
+.computer-science-page h3,
+.computer-science-page h4 {
+  font-size: 20px;
+}
+
+.computer-science-page p,
+.computer-science-page li,
+.computer-science-page td,
+.computer-science-page th,
+.computer-science-page a,
+.computer-science-page blockquote {
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.computer-science-page .lead {
+  max-width: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .computer-science-page .lead {
+    white-space: normal;
+  }
+}
+
+.computer-science-page .lead {
+  max-width: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .computer-science-page .lead {
+    white-space: normal;
   }
 }
 </style>
