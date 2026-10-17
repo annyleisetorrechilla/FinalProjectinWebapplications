@@ -205,4 +205,10 @@ const visiblePartners = computed(() => (isExpanded.value ? partners : partners.s
     min-height: 440px;
   }
 }
+
+@media (max-width: 640px) {
+  .partners-section {
+    min-height: 440px;
+  }
+}
 </style>
